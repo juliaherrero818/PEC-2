@@ -90,6 +90,14 @@ while True:
 
     elif opcion == 3:
         busca_tarea = input(Fore.MAGENTA + 'Introduzca la tarea que desea buscar: ')
+        print('')
+
+        if busca_tarea.strip() == '':
+            print(Fore.RED + Style.BRIGHT + 'No se ha introducido una tarea')
+            print('')
+            input('Pulsa ENTER para volver al menú principal')
+            continue
+
         resultado = operaciones.buscar_tarea(busca_tarea)
         print('')
         
@@ -111,7 +119,7 @@ while True:
 
     
     elif opcion == 4:
-        print(Fore.GREEN + Style.BRIGHT + 'Se ha cerrado el programa correctamente')
+        print(Fore.GREEN + Style.BRIGHT + 'El programa se ha cerrado correctamente')
         print('')
         break
     
